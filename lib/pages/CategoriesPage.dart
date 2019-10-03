@@ -81,7 +81,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
 
     return Query(
         options: QueryOptions(document: categoriesQuery),
-        builder: (QueryResult result) {
+        builder: (QueryResult result, { VoidCallback refetch, FetchMore fetchMore }) {
           Widget body = _resultBody(result);
 
           return Scaffold(

@@ -59,11 +59,8 @@ class LoginPageState extends State<LoginPage> {
             }));
   }
 
-  _onCompleted(Function setToken) => (QueryResult result) {
-        if (result.hasErrors) {
-          return null;
-        }
-        setToken(result.data['authenticate']);
+  _onCompleted(Function setToken) => (dynamic resultData) {
+        setToken(resultData['authenticate']);
         Navigator.of(context).pop();
       };
 

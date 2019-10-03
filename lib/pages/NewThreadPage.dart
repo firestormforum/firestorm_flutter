@@ -90,12 +90,9 @@ class _NewThreadPageState extends State<NewThreadPage> {
                 )));
   }
 
-  _onCompleted(QueryResult result) {
-    if (result.hasErrors) {
-      return null;
-    }
+  _onCompleted(dynamic resultData) {
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) {
-      return ThreadPage(threadId: result.data["createThread"]["id"]);
+      return ThreadPage(threadId: resultData["createThread"]["id"]);
     }));
   }
 }

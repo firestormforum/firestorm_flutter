@@ -75,11 +75,7 @@ class _NewPostPageState extends State<NewPostPage> {
                 )));
   }
 
-  _onCompleted(QueryResult result) {
-    if (result.hasErrors) {
-      debugPrint(result.errors.toString());
-      return null;
-    }
+  _onCompleted(dynamic resultData) {
     Navigator.of(context).pop();
   }
 }

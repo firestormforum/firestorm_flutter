@@ -30,7 +30,7 @@ dependencies:
   absinthe_socket: ^0.0.2
 
   # We want to talk to a GraphQL backend
-  graphql_flutter: ^1.0.0-alpha
+  graphql_flutter: ^2.1.0
 
   # We want easy shared state management
   scoped_model: ^0.3.0

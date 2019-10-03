@@ -117,7 +117,7 @@ class _ThreadPageState extends State<ThreadPage> {
     return Query(
         options: QueryOptions(
             document: threadQuery, variables: {"id": widget.threadId}),
-        builder: (QueryResult result) {
+        builder: (QueryResult result, { VoidCallback refetch, FetchMore fetchMore }) {
           Widget body = _resultBody(result);
           Widget title = _resultTitle(result);
 

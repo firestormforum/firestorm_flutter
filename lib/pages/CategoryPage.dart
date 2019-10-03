@@ -87,7 +87,7 @@ class _CategoryPageState extends State<CategoryPage> {
     return Query(
         options: QueryOptions(
             document: categoryQuery, variables: {"id": widget.categoryId}),
-        builder: (QueryResult result) {
+        builder: (QueryResult result, { VoidCallback refetch, FetchMore fetchMore }) {
           Widget body = _resultBody(result);
           Widget title = _resultTitle(result);
 
